@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <title>DYD - Paleta</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            main{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            
+            table{
+                width: 100%;
+                text-align: center;
+                font-family: sans-serif;
+            }
+
+            td{
+                padding: 50px;
+                color: white;
+                font-weight: bold;
+                position: relative;
+                cursor: pointer;
+            }
+
+            td::after {
+                content: 'Copiado!';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.7);
+                color: #fff;
+                padding: 4px 8px;
+                font-size: 12px;
+                border-radius: 4px;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s;
+            }
+
+            td.copied::after {
+                opacity: 1;
+            }
+
+            .dark-text{
+                color: #111;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <table>
+            <tr>
+                <td style="background: var(--main-blue-50);" class="dark-text">#eff6ff</td>
+                <td style="background: var(--main-blue-100);" class="dark-text">#dbeafe</td>
+                <td style="background: var(--main-blue-200);" class="dark-text">#bfdbfe</td>
+                <td style="background: var(--main-blue-300);" class="dark-text">#93c5fd</td>
+                <td style="background: var(--main-blue-400);">#60a5fa</td>
+                <td style="background: var(--main-blue-500);">#3b82f6</td>
+                <td style="background: var(--main-blue-600);">#2563eb</td>
+                <td style="background: var(--main-blue-700);">#1d4ed8</td>
+                <td style="background: var(--main-blue-800);">#1e40af</td>
+                <td style="background: var(--main-blue-900);">#1e3a8a</td>
+                <td style="background: var(--main-blue-950);">#172554</td>
+            </tr>
+            <tr>
+                <td style="background: var(--cyan-aqua-50);" class="dark-text">#ecfeff</td>
+                <td style="background: var(--cyan-aqua-100);" class="dark-text">#cffafe</td>
+                <td style="background: var(--cyan-aqua-200);" class="dark-text">#a5f3fc</td>
+                <td style="background: var(--cyan-aqua-300);" class="dark-text">#67e8f9</td>
+                <td style="background: var(--cyan-aqua-400);">#22d3ee</td>
+                <td style="background: var(--cyan-aqua-500);">#06b6d4</td>
+                <td style="background: var(--cyan-aqua-600);">#0891b2</td>
+                <td style="background: var(--cyan-aqua-700);">#0e7490</td>
+                <td style="background: var(--cyan-aqua-800);">#155e75</td>
+                <td style="background: var(--cyan-aqua-900);">#164e63</td>
+                <td style="background: var(--cyan-aqua-950);">#083344</td>
+            </tr>
+            <tr>
+                <td style="background: var(--spring-green-50);" class="dark-text">#ecfdf5</td>
+                <td style="background: var(--spring-green-100);" class="dark-text">#d1fae5</td>
+                <td style="background: var(--spring-green-200);" class="dark-text">#a7f3d0</td>
+                <td style="background: var(--spring-green-300);" class="dark-text">#6ee7b7</td>
+                <td style="background: var(--spring-green-400);">#34d399</td>
+                <td style="background: var(--spring-green-500);">#10b981</td>
+                <td style="background: var(--spring-green-600);">#059669</td>
+                <td style="background: var(--spring-green-700);">#047857</td>
+                <td style="background: var(--spring-green-800);">#065f46</td>
+                <td style="background: var(--spring-green-900);">#064e3b</td>
+                <td style="background: var(--spring-green-950);">#022c22</td>
+            </tr>
+            <tr>
+                <td style="background: var(--dark-blue-50);" class="dark-text">#f0f4f8</td>
+                <td style="background: var(--dark-blue-100);" class="dark-text">#d9e2ec</td>
+                <td style="background: var(--dark-blue-200);" class="dark-text">#bcccdc</td>
+                <td style="background: var(--dark-blue-300);" class="dark-text">#9fb3c8</td>
+                <td style="background: var(--dark-blue-400);">#829ab1</td>
+                <td style="background: var(--dark-blue-500);">#627d98</td>
+                <td style="background: var(--dark-blue-600);">#486581</td>
+                <td style="background: var(--dark-blue-700);">#334e68</td>
+                <td style="background: var(--dark-blue-800);">#243b53</td>
+                <td style="background: var(--dark-blue-900);">#102a43</td>
+                <td style="background: var(--dark-blue-950);">#0a1e30</td>
+            </tr>
+            </table>
+        </main>
+        <script>
+            document.querySelectorAll('td').forEach(td => {
+                td.addEventListener('click', () => {
+                    const text = td.innerText.trim();
+
+                    navigator.clipboard.writeText(text).then(() => {
+                        td.classList.add('copied');
+                        setTimeout(() => td.classList.remove('copied'), 1000);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

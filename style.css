@@ -1,0 +1,53 @@
+:root {
+    /* Main Blue */
+    --main-blue-50: #eff6ff;
+    --main-blue-100: #dbeafe;
+    --main-blue-200: #bfdbfe;
+    --main-blue-300: #93c5fd;
+    --main-blue-400: #60a5fa;
+    --main-blue-500: #3b82f6;
+    --main-blue-600: #2563eb;
+    --main-blue-700: #1d4ed8;
+    --main-blue-800: #1e40af;
+    --main-blue-900: #1e3a8a;
+    --main-blue-950: #172554;
+
+    /* Cyan Aqua */
+    --cyan-aqua-50: #ecfeff;
+    --cyan-aqua-100: #cffafe;
+    --cyan-aqua-200: #a5f3fc;
+    --cyan-aqua-300: #67e8f9;
+    --cyan-aqua-400: #22d3ee;
+    --cyan-aqua-500: #06b6d4;
+    --cyan-aqua-600: #0891b2;
+    --cyan-aqua-700: #0e7490;
+    --cyan-aqua-800: #155e75;
+    --cyan-aqua-900: #164e63;
+    --cyan-aqua-950: #083344;
+
+    /* Spring Green */
+    --spring-green-50: #ecfdf5;
+    --spring-green-100: #d1fae5;
+    --spring-green-200: #a7f3d0;
+    --spring-green-300: #6ee7b7;
+    --spring-green-400: #34d399;
+    --spring-green-500: #10b981;
+    --spring-green-600: #059669;
+    --spring-green-700: #047857;
+    --spring-green-800: #065f46;
+    --spring-green-900: #064e3b;
+    --spring-green-950: #022c22;
+
+    /* Dark Blue */
+    --dark-blue-50: #f0f4f8;
+    --dark-blue-100: #d9e2ec;
+    --dark-blue-200: #bcccdc;
+    --dark-blue-300: #9fb3c8;
+    --dark-blue-400: #829ab1;
+    --dark-blue-500: #627d98;
+    --dark-blue-600: #486581;
+    --dark-blue-700: #334e68;
+    --dark-blue-800: #243b53;
+    --dark-blue-900: #102a43;
+    --dark-blue-950: #0a1e30;
+}
